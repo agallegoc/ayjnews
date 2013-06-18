@@ -1,14 +1,16 @@
 {
   "name": "ayjnews",
-  "description": "ayjnews",
+  "description": "ayjnews sample application",
   "launch_path": "/index.html",
   "type": "privileged",
   "developer": {
-    "name": "TID",
-    "url": "https://github.com/mozilla-b2g/gaia"
+    "name": "AyJ",
+    "url": "https://github.com/agc327/ayjnews"
   },
   "permissions": {
-    "systemXHR": {}
+    "systemXHR": {
+	  "description": "Required for getting information from the web"
+	}
   },
   "locales": {
     "en-US": {
@@ -18,17 +20,17 @@
   },
   "default_locale": "en-US",
   "icons": {
-    "60": "/style/icons/60/Sms.png",
-    "120": "/style/icons/Sms.png",
-    "320": "/style/icons/320/Sms.png"
+    "128": "/style/icons/Sms.png",
+    "60": "/style/icons/60/Sms.png"
   },
   "orientation": "portrait-primary",
   "activities": {
     "view": {
       "filters": {
-        "type": "url",
-        "url": { "required":true, "regexp":"/^https?:.{1,16384}$/" }
-      }
+        "type": "url"
+      },
+	  "href": "index.html",
+      "disposition": "window"
     }
   }
 }
